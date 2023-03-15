@@ -1,0 +1,18 @@
+% for signedness in [True, False]:
+%    for width in [0, 8, 16, 32, 64]:
+%        Name = f"{'' if signedness else 'U'}Int{str(width) if width > 0 else ''}"
+struct ${Name}Example: RawRepresentable, Codable, Hashable, Sendable {
+    typealias RawValue = ${Name}
+    
+    let rawValue: ${Name}
+    
+    init?(rawValue: RawValue) {
+        self.rawValue = rawValue
+    }
+    
+    init(_ rawValue: RawValue) {
+        self.init(rawValue: rawValue)!
+    }
+}
+%     end
+% end
