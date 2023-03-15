@@ -36,8 +36,6 @@ extension PackagePlugin.Path {
     ///
     /// Example:
     ///
-    ///     let path = .init("/foo/bar.tar.gz")
-    ///
     ///     "/foo.pkg.tar.gz".settingExtension(to: "bar")    // "/foo.pkg.tar.bar"
     ///     "/foo.pkg.tar.gz".settingExtension(to: "tar")    // "/foo.pkg.tar"
     ///     "/foo.pkg.tar.gz".settingExtension(to: "gz")     // "/foo.pkg.tar.gz"
